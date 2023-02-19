@@ -5,9 +5,6 @@ async function getDataMock() {
     })
 }
 
-// run page on edge server - ref: https://beta.nextjs.org/docs/rendering/edge-and-nodejs-runtimes#global-runtime-option
-export const runtime = 'experimental-edge';
-
 export default async function Page() {
     const fetchedData = await getDataMock()
 
