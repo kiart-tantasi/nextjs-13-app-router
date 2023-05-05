@@ -1,5 +1,5 @@
-import LayoutComponent from "@/components/LayoutComponent";
-import { getData } from "@/utils/getData";
+import LayoutComponent from "@/app/components/LayoutComponent";
+import { getData } from "@/app/utils/getData";
 
 export default async function NestedLayout({
   children,

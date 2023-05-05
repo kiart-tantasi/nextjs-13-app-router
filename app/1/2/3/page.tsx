@@ -1,4 +1,4 @@
-import { getData } from "@/utils/getData";
+import { getData } from "@/app/utils/getData";
 
 export default async function ServerPage() {
   const data = await getData(8000);
