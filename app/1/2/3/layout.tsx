@@ -1,12 +1,17 @@
-import LayoutComponent from "@/app/components/LayoutComponent";
-import { getData } from "@/app/utils/getData";
+import LayoutComponent from "@/components/LayoutComponent";
 
 export default async function NestedLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const data = await getData(6000);
-  console.log(`data: ${data}`);
+  const res = await fetch("https://catfact.ninja/fact", {
+    next: { revalidate: 1 },
+  });
+  await new Promise((res) => {
+    setTimeout(res, 6000);
+  });
+  const data = await res.json();
+  console.log(`data: ${JSON.stringify(data)}`);
   return <LayoutComponent id={3}>{children}</LayoutComponent>;
 }
