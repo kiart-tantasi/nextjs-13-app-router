@@ -1,8 +1,9 @@
 // simulating sending request
-export async function getData(timeToWait: number) {
+export async function getData(timeToWait: number): Promise<number> {
+  "use server";
   return new Promise((resolve) => {
     setTimeout(() => {
-      resolve("MOCK");
+      resolve(Math.random());
     }, timeToWait);
   });
 }
