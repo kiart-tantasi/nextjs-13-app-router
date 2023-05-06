@@ -3,7 +3,7 @@ async function getData() {
     cache: "no-store",
   });
   await new Promise(async (res) => {
-    setTimeout(res, 8000);
+    setTimeout(res, 10000);
   });
   return res.json();
 }

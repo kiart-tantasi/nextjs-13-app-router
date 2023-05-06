@@ -5,7 +5,7 @@ async function getData() {
     cache: "no-store",
   });
   await new Promise(async (res) => {
-    setTimeout(res, 2000);
+    setTimeout(res, 1000);
   });
   return res.json();
 }
