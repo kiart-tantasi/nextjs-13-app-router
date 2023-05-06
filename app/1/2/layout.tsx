@@ -1,10 +1,13 @@
 import LayoutComponent from "@/components/LayoutComponent";
 
 async function getData() {
-  await new Promise(async (res) => {
-    setTimeout(res, 2000);
+  const res = await fetch("https://catfact.ninja/fact", {
+    cache: "no-store",
   });
-  return "mock";
+  await new Promise(async (res) => {
+    setTimeout(res, 4000);
+  });
+  return res.json();
 }
 
 export default async function NestedLayout({
