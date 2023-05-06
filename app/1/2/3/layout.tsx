@@ -8,10 +8,13 @@ export default async function NestedLayout({
   const res = await fetch("https://catfact.ninja/fact", {
     next: { revalidate: 1 },
   });
-  await new Promise((res) => {
+  await new Promise(async (res) => {
     setTimeout(res, 6000);
   });
   const data = await res.json();
-  console.log(`data: ${JSON.stringify(data)}`);
-  return <LayoutComponent id={3}>{children}</LayoutComponent>;
+  return (
+    <LayoutComponent id={3} data={JSON.stringify(data)}>
+      {children}
+    </LayoutComponent>
+  );
 }

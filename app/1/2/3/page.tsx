@@ -10,6 +10,9 @@ export default async function ServerPage() {
   return (
     <div style={{ border: "1px solid black" }}>
       <h1 style={{ textAlign: "center" }}>Page is successfully rendered !</h1>
+      <p style={{ fontSize: "10px", margin: "10px" }}>
+        page data: {JSON.stringify(data)}
+      </p>
     </div>
   );
 }
