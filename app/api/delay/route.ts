@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 
 export async function GET(req: NextRequest) {
   const paramsString: string | undefined = req.url.split("?")[1];
-  const params = new URLSearchParams(paramsString);
+  const params: URLSearchParams = new URLSearchParams(paramsString);
   const queryParamTime: string | null = params.get("time");
   let timeToDelay: number = queryParamTime ? +queryParamTime : 2000;
 

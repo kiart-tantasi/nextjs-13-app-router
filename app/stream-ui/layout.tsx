@@ -8,7 +8,7 @@ async function getData() {
   return res.json();
 }
 
-export default async function NestedLayout({
+export default async function Layout({
   children,
 }: {
   children: React.ReactNode;

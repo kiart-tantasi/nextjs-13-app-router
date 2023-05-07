@@ -6,7 +6,7 @@ async function getData() {
   return res.json();
 }
 
-export default async function ServerPage() {
+export default async function Page() {
   const data = await getData();
   return (
     <div style={{ border: "1px solid black", textAlign: "center" }}>
