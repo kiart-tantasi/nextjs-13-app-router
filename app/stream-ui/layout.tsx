@@ -1,11 +1,9 @@
 import LayoutComponent from "@/components/LayoutComponent";
 
 async function getData() {
-  const res = await fetch("https://catfact.ninja/fact", {
+  const host = "https://nextjs-13-kt.vercel.app";
+  const res = await fetch(`${host}/api/delay?time=2000`, {
     cache: "no-store",
-  });
-  await new Promise(async (res) => {
-    setTimeout(res, 2000);
   });
   return res.json();
 }
