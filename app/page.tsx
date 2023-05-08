@@ -8,8 +8,8 @@ export default function Page() {
       </a>
       <br />
       <br />
-      <a href="/1/2/3">
-        <b>Try Nested Layout</b>
+      <a href="/1/2">
+        <b>Try Nested Layouts</b>
       </a>
     </div>
   );

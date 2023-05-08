@@ -5,7 +5,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body
+        style={{
+          boxSizing: "border-box",
+          margin: 0,
+        }}
+      >
+        {children}
+      </body>
     </html>
   );
 }
