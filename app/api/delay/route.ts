@@ -5,10 +5,8 @@ export async function GET(req: NextRequest) {
   const params: URLSearchParams = new URLSearchParams(paramsString);
   const queryParamTime: string | null = params.get("time");
   let timeToDelay: number = queryParamTime ? +queryParamTime : 2000;
-
-  // timeToDelay can only be 10,000 ms or smaller
-  timeToDelay = timeToDelay > 10_000 ? 10_000 : timeToDelay;
-
+  const MAX_TIME_ALLOWED = 10_000;
+  timeToDelay = timeToDelay > MAX_TIME_ALLOWED ? MAX_TIME_ALLOWED : timeToDelay;
   await new Promise((res) => {
     setTimeout(res, timeToDelay);
   });
