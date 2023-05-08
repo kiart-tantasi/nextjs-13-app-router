@@ -1,9 +1,10 @@
-import getApiUrl from "@/utils/getApiUrl";
-
 async function getData() {
-  const res = await fetch(getApiUrl("/api/delay?time=8000"), {
-    cache: "no-store",
-  });
+  const res = await fetch(
+    "https://nextjs-13-kt.vercel.app/api/delay?time=8000",
+    {
+      cache: "no-store",
+    }
+  );
   return res.json();
 }
 

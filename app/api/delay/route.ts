@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 
 export async function GET(req: NextRequest) {
   try {
+    console.log(JSON.stringify(req));
     const paramsString: string | undefined = req.url.split("?")[1];
     const params: URLSearchParams = new URLSearchParams(paramsString);
     const queryParamTime: string | null = params.get("time");
