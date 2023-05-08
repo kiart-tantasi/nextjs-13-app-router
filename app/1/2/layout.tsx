@@ -1,8 +1,8 @@
 import LayoutComponent from "@/components/LayoutComponent";
+import getApiUrl from "@/utils/getApiUrl";
 
 async function getData() {
-  const host = "https://nextjs-13-kt.vercel.app";
-  const res = await fetch(`${host}/api/delay?time=4000`, {
+  const res = await fetch(getApiUrl("/api/delay?time=4000"), {
     cache: "no-store",
   });
   return res.json();
