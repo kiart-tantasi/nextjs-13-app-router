@@ -1,4 +1,4 @@
-import LayoutComponent from "@/components/LayoutComponent";
+import LayoutComponent from "@/app/@components/LayoutComponent";
 
 async function getData() {
   const host = "https://nextjs-13-kt.vercel.app";
