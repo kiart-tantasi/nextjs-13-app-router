@@ -9,7 +9,7 @@ export default function Page() {
       <br />
       <br />
       <a href="/1/2/3">
-        <b>Try Streaming UI 2 (triple nested layouts)</b>
+        <b>Try Nested Layout</b>
       </a>
     </div>
   );
