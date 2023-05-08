@@ -1,10 +1,8 @@
 async function getData() {
-  const res = await fetch(
-    "https://nextjs-13-kt.vercel.app/api/delay?time=8000",
-    {
-      cache: "no-store",
-    }
-  );
+  const host = "https://nextjs-13-kt.vercel.app";
+  const res = await fetch(`${host}/api/delay?time=8000`, {
+    cache: "no-store",
+  });
   return res.json();
 }
 
