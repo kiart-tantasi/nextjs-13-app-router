@@ -3,3 +3,6 @@ clean:
 
 server:
 	make clean && npm run build && npm run start
+
+cleandev:
+	make clean && npm run dev
